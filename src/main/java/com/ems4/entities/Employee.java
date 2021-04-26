@@ -1,5 +1,7 @@
 package com.ems4.entities;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
@@ -30,8 +32,9 @@ public class Employee implements Serializable {
     @JoinColumn(name = "projectId", referencedColumnName = "projectId")
     private Project project;
 
-    @Column(name = "employeeJoin")
-    @Temporal(TemporalType.TIMESTAMP)
+    @Column
+    @Temporal(TemporalType.DATE)
+    @JsonFormat(pattern="yyyy-MM-dd")
     //@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
     private Date employeeJoin;
 

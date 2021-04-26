@@ -26,7 +26,6 @@ public class Department implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "departmentId")
-    @OneToMany()
     private Long departmentId;
 
     @Column(name = "departmentCode")

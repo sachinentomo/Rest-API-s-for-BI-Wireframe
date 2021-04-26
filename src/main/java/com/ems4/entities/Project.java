@@ -36,10 +36,9 @@ public class Project implements Serializable {
         this.projectId = projectId;
     }
 
-    public Project(String projectName, String projectDesc, boolean isActive) {
+    public Project(String projectName, String projectDesc) {
         this.projectName = projectName;
         this.projectDesc = projectDesc;
-        this.isActive = isActive;
     }
 
     public Project(Long projectId, String projectName, String projectCode, String projectDesc, boolean isActive) {
@@ -93,7 +92,7 @@ public class Project implements Serializable {
         return isActive;
     }
 
-    public void setIsActive(boolean isActive) {
+    public void setActive(boolean isActive) {
         this.isActive = isActive;
     }
 }
